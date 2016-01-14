@@ -1,0 +1,40 @@
+<head>
+  <script src="https://fb.me/react-0.14.3.js"></script>
+  <script src="https://fb.me/react-dom-0.14.3.js"></script>
+  <script src="https://fb.me/JSXTransformer-0.13.3.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous">
+</head>
+<body>
+  <div class="main">
+
+  </div>
+
+</body>
+<script type="text/jsx">
+
+  var Badge = React.createClass({
+
+    render: function() {
+      return (
+        <div>
+          <button className="btn btn-primary" type="button">
+            {this.props.title} <span className="badge">{this.props.count}</span>
+          </button>
+        </div>
+      )
+    }
+
+  });
+
+  var options = {
+    title: 'Inbox',
+    count: 32
+  }
+
+  var element = React.createElement(Badge, options);
+
+  ReactDOM.render(element, document.body)
+
+</script>
